@@ -1,0 +1,10 @@
+README.md
+main.py
+pyproject.toml
+cicd_example.egg-info/PKG-INFO
+cicd_example.egg-info/SOURCES.txt
+cicd_example.egg-info/dependency_links.txt
+cicd_example.egg-info/requires.txt
+cicd_example.egg-info/top_level.txt
+tests/test.py
+tests/test_main.py

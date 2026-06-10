@@ -1,0 +1,17 @@
+name: Release Pipeline
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  call-test-workflow:
+    uses: ./.github/workflows/test.yml
+
+  deploy-job:
+    needs: call-test-workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Deploy to PyPI
+        run: echo "Deploying to PyPI..."
