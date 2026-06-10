@@ -4,3 +4,5 @@ version = "0.1.0"
 dependencies = [
     "pytest",
 ]
+[tool.pytest.ini_options]
+pythonpath = ["."]
