@@ -22,7 +22,11 @@ jobs:
         uses: actions/checkout@v6
       - name: Install Dependency
         run: uv sync
+      # - name: Install Playwright Browsers
+      #   run: uv run playwright install --with-deps
       - name: Install Playwright Browsers
-        run: uv run playwright install --with-deps
+        run: uv run --with playwright playwright install --with-deps
+      # - name: Test
+      #   run: uv run pytest tests/
       - name: Test
-        run: uv run pytest tests/
+        run: uv run --with pytest-playwright pytest tests/
